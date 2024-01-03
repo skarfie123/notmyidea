@@ -223,6 +223,12 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 		padding: 5px 1.5em;
 		text-decoration: none;
 	}
+	#banner nav input {
+		display: inline-block;
+		height: 24px;
+		margin: 5px 1.5em;
+		text-decoration: none;
+	}
 	#banner nav a:hover, #banner nav a:active,
 	#banner nav .active a:link, #banner nav .active a:visited {
 		background: #447dc7;

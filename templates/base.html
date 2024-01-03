@@ -36,10 +36,10 @@
                     <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                 {% endfor %}
                 {% endif %}
+                    <li><input data-stork="sitesearch" placeholder="Search" /></li>
                 </ul></nav>
         </header><!-- /#banner -->
         <section class="body">  
-                Search: <input data-stork="sitesearch" />
                 <div data-stork="sitesearch-output"></div>
                 <br/>
         </section>
