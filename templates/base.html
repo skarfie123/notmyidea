@@ -14,6 +14,7 @@
         <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
         {% endif %}
         {% block extra_head %}{% endblock extra_head %}
+        <link rel="stylesheet" href="https://files.stork-search.net/basic.css" />
         {% endblock head %}
 </head>
 
@@ -37,6 +38,11 @@
                 {% endif %}
                 </ul></nav>
         </header><!-- /#banner -->
+        <section class="body">  
+                Search: <input data-stork="sitesearch" />
+                <div data-stork="sitesearch-output"></div>
+                <br/>
+        </section>
         {% block content %}
         {% endblock %}
         <section id="extras" class="body">
@@ -79,5 +85,9 @@
 
 {% include 'analytics.html' %}
 {% include 'disqus_script.html' %}
+<script src="https://files.stork-search.net/releases/v1.5.0/stork.js"></script>
+<script>
+    stork.register("sitesearch", "{{ SITEURL }}/search-index.st");
+</script>
 </body>
 </html>
